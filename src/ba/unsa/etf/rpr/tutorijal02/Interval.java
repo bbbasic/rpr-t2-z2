@@ -19,9 +19,26 @@ public class Interval {
     public boolean isNull() {
         return x1 == 0 && x2 == 0 && prva_tacka && druga_tacka;
     }
+
     public boolean isIn(double tacka) {
         return tacka >= x1 && tacka <= x2;
     }
+    //2
+    public Interval intersect(Interval i1) {
+
+        if(i1.x1 < x1 && i1.x2 < x2) return  new Interval(i1.x1, i1.x2, false,false);
+        else if(i1.x1 < x1 && i1.x2 > x2)  return  new Interval(i1.x1, x2, false, false);
+        else if (i1.x1 > x1 && i1.x2 < x2)  return  new Interval(x1,i1.x2, false, false);
+        else  return  new Interval(i1.x1, x2, false, false);
+    }
+
+    public static Interval intersect(Interval i1, Interval i2) {
+        if(i1.x1 < i2.x1 && i1.x2 < i2.x2) return  new Interval(i1.x1, i1.x2, false,false);
+        else if(i1.x1 < i2.x1 && i1.x2 > i2.x2)  return  new Interval(i1.x1, i2.x2, false, false);
+        else if (i1.x1 > i2.x1 && i1.x2 < i2.x2)  return  new Interval(i2.x1,i1.x2, false, false);
+        else  return  new Interval(i1.x1, i2.x2, false, false);
+    }
+
 
 
 
