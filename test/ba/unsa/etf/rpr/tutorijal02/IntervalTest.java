@@ -11,11 +11,11 @@ class IntervalTest {
         });
     }
 
-//    @org.junit.jupiter.api.Test
-//    void toStringTest() {
-//        Interval i = new Interval(1.1, 2.5, true, false);
-//        assertEquals("[1.1,2.5)", i.toString());
-//    }
+    @org.junit.jupiter.api.Test
+    void toStringTest() {
+        Interval i = new Interval(1.1, 2.5, true, false);
+        assertEquals("[1.1,2.5)", i.toString());
+    }
 
     @org.junit.jupiter.api.Test
     void isIn() {
@@ -29,23 +29,23 @@ class IntervalTest {
         assertTrue(i.isIn(1.1));
     }
 
-//    @org.junit.jupiter.api.Test
-//    void isIn3() {
-//        Interval i = new Interval(1.1, 2.5, true, false);
-//        assertFalse(i.isIn(2.5));
-//    }
+    @org.junit.jupiter.api.Test
+    void isIn3() {
+        Interval i = new Interval(1.1, 2.5, true, false);
+        assertFalse(i.isIn(2.5));
+    }
 
-//    @org.junit.jupiter.api.Test
-//    void isNull() {
-//        Interval i = new Interval();
-//        assertTrue(i.isNull());
-//    }
+    @org.junit.jupiter.api.Test
+    void isNull() {
+        Interval i = new Interval();
+        assertTrue(i.isNull());
+    }
 
-//    @org.junit.jupiter.api.Test
-//    void toString2() {
-//        Interval i = new Interval();
-//        assertEquals("()", i.toString());
-//    }
+    @org.junit.jupiter.api.Test
+    void toString2() {
+        Interval i = new Interval();
+        assertEquals("()", i.toString());
+    }
 
     @org.junit.jupiter.api.Test
     void intersect() {
@@ -62,19 +62,19 @@ class IntervalTest {
         assertEquals("[2.2,2.5)", i3.toString());
     }
 
-//    @org.junit.jupiter.api.Test
-//    void equals() {
-//        Interval i = new Interval(1.1, 2.5, true, false);
-//        Interval i2 = new Interval(1.1, 2.5, true, false);
-//        assertTrue(i.equals(i2));
-//    }
-//
-//    @org.junit.jupiter.api.Test
-//    void equals2() {
-//        Interval i = new Interval(1.1, 2.5, true, false);
-//        Interval i2 = new Interval(1.1, 2.5, true, true);
-//        assertFalse(i.equals(i2));
-//    }
+    @org.junit.jupiter.api.Test
+    void equals() {
+        Interval i = new Interval(1.1, 2.5, true, false);
+        Interval i2 = new Interval(1.1, 2.5, true, false);
+        assertTrue(i.equals(i2));
+    }
+
+    @org.junit.jupiter.api.Test
+    void equals2() {
+        Interval i = new Interval(1.1, 2.5, true, false);
+        Interval i2 = new Interval(1.1, 2.5, true, true);
+        assertFalse(i.equals(i2));
+    }
 
     @org.junit.jupiter.api.Test
     void intersect2() {
